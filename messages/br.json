@@ -1,0 +1,22 @@
+{
+    "Index": {
+        "title": "projeto_r",
+        "job": "Desenvolvedor",
+        "doc": "Corrículo",
+        "my_desc": "Apenas um cara",
+        "serv_tit": "Serviços que ofereço",
+        "serv_desc_1": "Coisas de caras",
+        "serv_desc_2": "Mais coisas de caras",
+        "design_tit": "Design",
+        "design_1": "Designs e tals",
+        "design_2": "Ferramentas de design",
+        "design_3": "Ilustrador",
+        "code_tit": "Codigo",
+        "code_1": "Códigos e tals",
+        "code_2": "Linguagens de programa",
+        "code_3": "ADIs",
+        "port_tit": "Portifólio",
+        "port_1": "Coisas de caras",
+        "port_2": "Mais coisas de caras"
+    }
+}

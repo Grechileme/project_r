@@ -19,31 +19,19 @@ import web6 from "../../public/web6.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { data } from "autoprefixer";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useIntl, FormattedMessage } from "react-intl";
+import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
+import { title } from "process";
 
 export default function Home() {
-  // const getFromStorage = async (key) => {
-  //   if (typeof window !== "undefined") {
-  //     await window.localstorage?.getItem(key);
-  //   }
-  // };
 
-  // const setToStorage = (key, value) => {
-  //   if (typeof window !== "undefined") {
-  //     return window.localstorage?.setItem(key, value);
-  //   }
-  // };
-
-  // const stored = getFromStorage("dark");
   const [darkMode, setDarkMode] = useState(false);
-  // const [darkMode, setDarkMode] = useState(false);
-  // const [language, setLanguage] = useState(false);
 
-  // const { locale, locales, push } = useRouter();
-  // const handleClick = (language) => {
-  //   setLanguage(language);
-  //   // push('/', undefined, { locale: l })
-  // };
+  const { locales } = useRouter();
+
+  const t = useTranslations('Index');
 
   useEffect(() => {
     const data = window.localStorage.getItem('DARK_MODE');
@@ -65,21 +53,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <h1>{locale}</h1> */}
-
-      {/* <div>
-        {locales.map((l) => (
-          // <button key={l} onClick={(e)=>handleClick(e, l)}>
-          <button key={l} onClick={() => handleClick(l)}>
-            {l}
-          </button>
-        ))}
-      </div> */}
-
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className=" min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons">project_r</h1>
+            <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -88,11 +65,9 @@ export default function Home() {
                 />
               </li>
               <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white x-4 py-2 rounded-md ml-8"
-                  href="#"
-                >
-                  Resume
+                <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                   href="#">
+                  {t('doc')}
                 </a>
               </li>
             </ul>
@@ -102,10 +77,10 @@ export default function Home() {
               Lucas Grechi Leme
             </h2>
             <h3 className="text-2xl dark:text-gray-50 py-2 md:text-3xl">
-              Developer
+              {t('job')}
             </h3>
             <p className="text-md py-5 leading-8 dark:text-gray-200 text-gray-800 md:text-xl max-w-xl mx-auto">
-              Just a dude
+              {t('my_desc')}
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 text-gray-600">
@@ -126,12 +101,12 @@ export default function Home() {
         <section>
           <div>
             <h3 className="text-3xl py-1 dark:text-gray-50">
-              Services I offer
+              {t('serv_tit')}
             </h3>
             <p className="text-md py-2 leading-8 dark:text-gray-200 text-gray-800">
-              Dude <span className="text-teal-500"> stuff </span>
+              {t('serv_desc_1')}
             </p>
-            <p className="dark:text-gray-200">Mode dude stuff</p>
+            <p className="dark:text-gray-200">{t('serv_desc_2')}</p>
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
@@ -143,13 +118,13 @@ export default function Home() {
                 alt={""}
               />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-50">
-                Designs
+                {t('design_tit')}
               </h3>
-              <p className="py-2 dark:text-gray-200">Designs and shit</p>
-              <h4 className="py-4 text-teal-600">Designs tools</h4>
+              <p className="py-2 dark:text-gray-200">{t('design_1')}</p>
+              <h4 className="py-4 text-teal-600">{t('design_2')}</h4>
               <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">
-                Illustrator
+                {t('design_3')}
               </p>
               <p className="text-gray-800 dark:text-gray-200 py-1">Figna</p>
             </div>
@@ -162,15 +137,11 @@ export default function Home() {
                 alt={""}
               />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-50">
-                Code
+                {t('code_tit')}
               </h3>
-              <p className="py-2 dark:text-gray-200">Codes and shit</p>
-              <h4 className="py-4 text-teal-600">Designs tools</h4>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
-              <p className="text-gray-800 dark:text-gray-200 py-1">
-                Illustrator
-              </p>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Figna</p>
+              <p className="py-2 dark:text-gray-200">{t('code_1')}</p>
+              <h4 className="py-4 text-teal-600">{t('code_2')}</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">{t('code_3')}</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
@@ -195,11 +166,11 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-gray-50">Portifolio</h3>
+            <h3 className="text-3xl py-1 dark:text-gray-50">{t('port_tit')}</h3>
             <p className="text-md py-2 leading-8 dark:text-gray-200 text-gray-800">
-              Dude <span className="text-teal-500"> stuff </span>
+              {t('port_1')}
             </p>
-            <p className="dark:text-gray-200">Mode dude stuff</p>
+            <p className="dark:text-gray-200">{t('port_2')}</p>
           </div>
           <div className="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap">
             <div className="basis-1/3 flex-1">
@@ -255,4 +226,13 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+export async function getStaticProps({locale}: GetStaticPropsContext) {
+  console.log(locale);
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default
+    }
+  };
 }

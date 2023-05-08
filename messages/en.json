@@ -1,0 +1,22 @@
+{
+    "Index": {
+        "title": "project_r",
+        "job": "Developer",
+        "doc": "Resume",
+        "my_desc": "Just a dude",
+        "serv_tit": "Services I offer",
+        "serv_desc_1": "Dude stuff",
+        "serv_desc_2": "More dude stuff",
+        "design_tit": "Design",
+        "design_1": "Designs and shit",
+        "design_2": "Design tools",
+        "design_3": "Illustrator",
+        "code_tit": "Code",
+        "code_1": "Codes and shit",
+        "code_2": "Programming languages",
+        "code_3": "IDEs",
+        "port_tit": "Portifolio",
+        "port_1": "Dude stuff",
+        "port_2": "More dude stuff"
+    }
+}
