@@ -59,9 +59,17 @@ export default function Home() {
             <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
             <ul className="flex items-center">
               <li>
+                <a className="bg-gradient-to-r from-teal-500 to-[#00C5C5] text-white px-4 py-2 rounded-l-md ml-8" href="/en">
+                  English
+                </a>
+                <a className="bg-gradient-to-r from-[#00C5C5] to-cyan-500 text-white px-4 py-2 rounded-r-md" href="/br">
+                  Português
+                </a>
+              </li>
+              <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-yellow-300"
+                  className="cursor-pointer text-2xl dark:text-yellow-300 ml-8"
                 />
               </li>
               <li>
