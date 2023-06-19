@@ -18,18 +18,22 @@ import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useIntl, FormattedMessage } from "react-intl";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { title } from "process";
+// import { Resume } from "./pdf/resume";
+import Link from 'next/link';
+import PdfLink from '../components/PdfLink';
+
 
 export default function Home() {
 
   const [darkMode, setDarkMode] = useState(false);
 
-  const { locales } = useRouter();
+  // const { locales } = useRouter();
 
   const t = useTranslations('Index');
 
@@ -73,10 +77,13 @@ export default function Home() {
                 />
               </li>
               <li>
-                <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                   href="#">
+                <PdfLink />
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
                   {t('doc')}
-                </a>
+                  <PdfLink />
+                </button> */}
+                  {/* <Link className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" 
+                        href={"../pdf/resume"} target="_blank">{t('doc')}</Link> */}
               </li>
             </ul>
           </nav>
