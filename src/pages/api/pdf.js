@@ -10,7 +10,9 @@ export default async function handler (req, res) {
 
     pdf.create(html, options).toStream((err, stream) => {
         if (err) {
-            res.status(500).send('1Error generating PDF', err);
+            res.status(500).send(err);
+            console.log('err');
+            console.log(err)
         }
         else {
             res.setHeader('Content-Type', 'application/pdf');
