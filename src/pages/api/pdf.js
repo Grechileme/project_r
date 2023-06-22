@@ -24,16 +24,21 @@
 // UP TO HERE WAS MADE USING HTML-PDF, WORKED LOCALLY, NOT SO MUCH IN PRODUCTION
 
 import jsPDF from "jspdf";
+// import { text } from '../../components/Resume.jsx'
 
 export default async function handler(req, res) {
     const doc = new jsPDF();
 
+    var text = '';
+
+    text += 'Kenobi';
+
     doc.setFontSize(16);
-    doc.text('Hello there', 10, 10);
+    doc.text(text, 10, 10);
 
     const pdfBuffer = doc.output('arraybuffer');
 
     res.setHeader('Content-Type', 'application/pdf');
     res.send(Buffer.from(pdfBuffer));
-    
+
 }

@@ -37,6 +37,11 @@ export default function Home() {
 
   const t = useTranslations('Index');
 
+  const [showPDF, setShowPDF] = useState(false);
+  const handleButtonClick = () => {
+    setShowPDF(true);
+  };
+
   useEffect(() => {
     const data = window.localStorage.getItem('DARK_MODE');
     console.log(data);
@@ -63,17 +68,17 @@ export default function Home() {
             <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
             <ul className="flex items-center">
               <li>
-                <a className="bg-gradient-to-r from-teal-500 to-[#00C5C5] text-white px-4 py-2 rounded-l-md ml-8" href="/en">
+                <a className="bg-gradient-to-r from-teal-500 to-[#00C5C5] text-white px-4 py-2 rounded-l-md ml-8 hover:animate-gradient-x" href="/en">
                   English
                 </a>
-                <a className="bg-gradient-to-r from-[#00C5C5] to-cyan-500 text-white px-4 py-2 rounded-r-md" href="/br">
+                <a className="bg-gradient-to-r from-[#00C5C5] to-cyan-500 text-white px-4 py-2 rounded-r-md hover:animate-gradient-x" href="/br">
                   Português
                 </a>
               </li>
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-yellow-300 ml-8"
+                  className="cursor-pointer text-2xl dark:text-yellow-300 ml-8 hover:animate-pulse"
                 />
               </li>
               <li>
@@ -84,6 +89,13 @@ export default function Home() {
                 </button> */}
                   {/* <Link className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" 
                         href={"../pdf/resume"} target="_blank">{t('doc')}</Link> */}
+                {/* <div>
+                {!showPDF ? (
+                  <button onClick={handleButtonClick}>Open PDF</button>
+                ) : (
+                  <PDFViewer url="/path/to/your/pdf/file.pdf" />
+                )}
+                </div> */}
               </li>
             </ul>
           </nav>
