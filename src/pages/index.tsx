@@ -82,7 +82,7 @@ export default function Home() {
                 />
               </li>
               <li>
-                <PdfLink />
+                {/* <PdfLink /> */}
                 {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
                   {t('doc')}
                   <PdfLink />
@@ -96,6 +96,11 @@ export default function Home() {
                   <PDFViewer url="/path/to/your/pdf/file.pdf" />
                 )}
                 </div> */}
+                <div className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:animate-[spin_2s]">
+                  <Link href={"/pdf/Resume.pdf"} target="_blank">
+                  Resume
+                  </Link>
+                </div>
               </li>
             </ul>
           </nav>
