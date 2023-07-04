@@ -27,6 +27,7 @@ import { title } from "process";
 // import { Resume } from "./pdf/resume";
 import Link from 'next/link';
 import PdfLink from '../components/PdfLink';
+import 'aos/dist/aos.css';
 
 
 export default function Home() {
@@ -104,7 +105,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="text-center p-10">
+          <div data-aos="fade-up" className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Lucas Grechi Leme
             </h2>
@@ -115,12 +116,12 @@ export default function Home() {
               {t('my_desc')}
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 text-gray-600">
+          <div data-aos="fade-up" className="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 text-gray-600">
             <AiFillTwitterCircle />
             <AiFillLinkedin />
             <AiFillYoutube />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div data-aos="fade-up" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image
               src={deved}
               fill
@@ -131,7 +132,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div>
+          <div data-aos="fade-up">
             <h3 className="text-3xl py-1 dark:text-gray-50">
               {t('serv_tit')}
             </h3>
@@ -140,7 +141,7 @@ export default function Home() {
             </p>
             <p className="dark:text-gray-200">{t('serv_desc_2')}</p>
           </div>
-          <div className="lg:flex gap-10">
+          <div data-aos="fade-up" className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
                 style={{ marginLeft: "auto", marginRight: "auto" }}
