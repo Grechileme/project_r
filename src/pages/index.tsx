@@ -30,6 +30,7 @@ import PdfLink from '../components/PdfLink';
 import 'aos/dist/aos.css';
 
 
+
 export default function Home() {
 
   const [darkMode, setDarkMode] = useState(false);
@@ -67,7 +68,7 @@ export default function Home() {
         <section className=" min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
-            <ul className="flex items-center">
+            <ul className="items-center lg:flex md:flex">
               <li>
                 <a className="bg-gradient-to-r from-teal-500 to-[#00C5C5] text-white px-4 py-2 rounded-l-md ml-8 hover:animate-gradient-x" href="/en">
                   English
@@ -76,33 +77,22 @@ export default function Home() {
                   Português
                 </a>
               </li>
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-yellow-300 ml-8 hover:animate-pulse"
-                />
-              </li>
-              <li>
-                {/* <PdfLink /> */}
-                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
-                  {t('doc')}
-                  <PdfLink />
-                </button> */}
-                  {/* <Link className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" 
-                        href={"../pdf/resume"} target="_blank">{t('doc')}</Link> */}
-                {/* <div>
-                {!showPDF ? (
-                  <button onClick={handleButtonClick}>Open PDF</button>
-                ) : (
-                  <PDFViewer url="/path/to/your/pdf/file.pdf" />
-                )}
-                </div> */}
-                <div className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:animate-[spin_2s]">
-                  <Link href={"/pdf/Resume.pdf"} target="_blank">
-                  Resume
-                  </Link>
-                </div>
-              </li>
+              <br></br>
+              <ul className="flex items-center justify-center">
+                <li>
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer text-2xl dark:text-yellow-300 ml-8 hover:animate-pulse"
+                  />
+                </li>
+                <li>
+                  <div className="text-center bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:animate-[spin_2s]">
+                    <Link href={"/pdf/Resume.pdf"} target="_blank">
+                    Resume
+                    </Link>
+                  </div>
+                </li>
+              </ul>
             </ul>
           </nav>
           <div data-aos="fade-up" className="text-center p-10">
@@ -151,15 +141,15 @@ export default function Home() {
                 alt={""}
               />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-50">
-                {t('design_tit')}
+                Front-end
               </h3>
-              <p className="py-2 dark:text-gray-200">{t('design_1')}</p>
-              <h4 className="py-4 text-teal-600">{t('design_2')}</h4>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
+              <p className="py-2 dark:text-gray-200">HTML</p>
+              <h4 className="py-4 text-teal-600">CSS</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">React</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">
-                {t('design_3')}
+                Next.js
               </p>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Figna</p>
+              {/* <p className="text-gray-800 dark:text-gray-200 py-1">{t('design_5')}</p> */}
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
@@ -170,11 +160,13 @@ export default function Home() {
                 alt={""}
               />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-50">
-                {t('code_tit')}
+                Back-end
               </h3>
-              <p className="py-2 dark:text-gray-200">{t('code_1')}</p>
-              <h4 className="py-4 text-teal-600">{t('code_2')}</h4>
-              <p className="text-gray-800 dark:text-gray-200 py-1">{t('code_3')}</p>
+              <p className="py-2 dark:text-gray-200">PHP</p>
+              <h4 className="py-4 text-teal-600">Java</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">JavaScript</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">C</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">C#</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
@@ -185,15 +177,11 @@ export default function Home() {
                 alt={""}
               />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-50">
-                Consulting
+                Database
               </h3>
-              <p className="py-2 dark:text-gray-200">Consulting and shit</p>
-              <h4 className="py-4 text-teal-600">Designs tools</h4>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
-              <p className="text-gray-800 dark:text-gray-200 py-1">
-                Illustrator
-              </p>
-              <p className="text-gray-800 dark:text-gray-200 py-1">Figna</p>
+              <p className="py-2 dark:text-gray-200">SQL</p>
+              <h4 className="py-4 text-teal-600">MySQL</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">PostgreSQL</p>
             </div>
           </div>
         </section>
