@@ -4,6 +4,8 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillYoutube,
+  AiFillGithub,
+  AiOutlineMail,
 } from "react-icons/ai";
 import Image from "next/image";
 import deved from "../../public/dev-ed-wave.png";
@@ -28,10 +30,19 @@ import { title } from "process";
 import Link from 'next/link';
 import PdfLink from '../components/PdfLink';
 import 'aos/dist/aos.css';
+// import { Alert } from 'reactstrap';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 
 
 export default function Home() {
+
+  const email = "grechilemelucas@gmail.com";
+
+  const copyemail = () => {
+    navigator.clipboard.writeText(email)
+  }
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -64,7 +75,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="overflow-auto bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className=" min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
@@ -107,11 +118,20 @@ export default function Home() {
             </p>
           </div>
           <div data-aos="fade-up" className="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 text-gray-600">
-            <AiFillTwitterCircle />
-            <AiFillLinkedin />
-            <AiFillYoutube />
+            <AiFillGithub />
+            <a href="https://www.linkedin.com/in/lucas-grechi-leme-86878a175/" target="_blank">
+              <AiFillLinkedin />
+            </a>
+            <Popup trigger={<a> <AiOutlineMail /> </a>} position={"right center"}>
+              <div>
+                Copy e-mail to clickboard?
+              </div>
+              <button onClick={copyemail} className="bg-gray-400 px-2 py-1 rounded-md active:bg-gray-600 justify-center">
+                Copy
+              </button>
+            </Popup>
           </div>
-          <div data-aos="fade-up" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div data-aos="zoom-out" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image
               src={deved}
               fill
@@ -131,8 +151,8 @@ export default function Home() {
             </p>
             <p className="dark:text-gray-200">{t('serv_desc_2')}</p>
           </div>
-          <div data-aos="fade-up" className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
+          <div className="lg:flex gap-10">
+            <div data-aos="flip-left" className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
                 style={{ marginLeft: "auto", marginRight: "auto" }}
                 width={100}
@@ -144,14 +164,14 @@ export default function Home() {
                 Front-end
               </h3>
               <p className="py-2 dark:text-gray-200">HTML</p>
-              <h4 className="py-4 text-teal-600">CSS</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">CSS</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">React</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">
                 Next.js
               </p>
               {/* <p className="text-gray-800 dark:text-gray-200 py-1">{t('design_5')}</p> */}
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
+            <div data-aos="flip-up" className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
                 style={{ marginLeft: "auto", marginRight: "auto" }}
                 width={100}
@@ -163,12 +183,12 @@ export default function Home() {
                 Back-end
               </h3>
               <p className="py-2 dark:text-gray-200">PHP</p>
-              <h4 className="py-4 text-teal-600">Java</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">Java</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">JavaScript</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">C</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">C#</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
+            <div data-aos="flip-right" className="text-center shadow-lg p-10 rounded-xl my-10 relative w-full">
               <Image
                 style={{ marginLeft: "auto", marginRight: "auto" }}
                 width={100}
@@ -180,7 +200,7 @@ export default function Home() {
                 Database
               </h3>
               <p className="py-2 dark:text-gray-200">SQL</p>
-              <h4 className="py-4 text-teal-600">MySQL</h4>
+              <p className="text-gray-800 dark:text-gray-200 py-1">MySQL</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">PostgreSQL</p>
             </div>
           </div>
