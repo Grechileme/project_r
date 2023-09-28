@@ -22,7 +22,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 // import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useIntl, FormattedMessage } from "react-intl";
+// import { useIntl, FormattedMessage } from "react-intl";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { title } from "process";
@@ -131,14 +131,14 @@ export default function Home() {
               </button>
             </Popup>
           </div>
-          <div data-aos="zoom-out" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          {/* <div data-aos="zoom-out" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image
               src={deved}
               fill
               style={{ objectFit: "cover" }}
               alt={"123"}
             />
-          </div>
+          </div> */}
         </section>
 
         <section>
@@ -202,6 +202,7 @@ export default function Home() {
               <p className="py-2 dark:text-gray-200">SQL</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">MySQL</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">PostgreSQL</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">Firebird</p>
             </div>
           </div>
         </section>
