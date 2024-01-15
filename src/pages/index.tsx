@@ -8,7 +8,7 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import Image from "next/image";
-import deved from "../../public/dev-ed-wave.png";
+import deved from "../../public/me.png";
 import design from "../../public/design.png";
 import code from "../../public/code.png";
 import consulting from "../../public/consulting.png";
@@ -98,7 +98,7 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="text-center bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:animate-[spin_2s]">
-                    <Link href={"/pdf/Resume.pdf"} target="_blank">
+                    <Link href={"/pdf/Resume - Lucas Grechi Leme.pdf"} target="_blank">
                     Resume
                     </Link>
                   </div>
@@ -131,14 +131,14 @@ export default function Home() {
               </button>
             </Popup>
           </div>
-          {/* <div data-aos="zoom-out" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div data-aos="zoom-out" className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image
               src={deved}
               fill
               style={{ objectFit: "cover" }}
-              alt={"123"}
+              alt={"Me"}
             />
-          </div> */}
+          </div>
         </section>
 
         <section>
@@ -208,60 +208,60 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-gray-50">{t('port_tit')}</h3>
+            {/* <h3 className="text-3xl py-1 dark:text-gray-50">{t('port_tit')}</h3>
             <p className="text-md py-2 leading-8 dark:text-gray-200 text-gray-800">
               {t('port_1')}
-            </p>
-            <p className="dark:text-gray-200">{t('port_2')}</p>
+            </p> */}
+            {/* <p className="dark:text-gray-200">{t('port_2')}</p> */}
           </div>
           <div className="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap">
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web1}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web2}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web3}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web4}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web5}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
+              {/* <Image
                 src={web6}
                 className="rounded-lg object-cover"
                 // layout='responsive'
                 alt={""}
-              />
+              /> */}
             </div>
           </div>
         </section>
