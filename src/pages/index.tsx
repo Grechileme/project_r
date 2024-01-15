@@ -122,12 +122,14 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/lucas-grechi-leme-86878a175/" target="_blank">
               <AiFillLinkedin />
             </a>
-            <Popup trigger={<a> <AiOutlineMail /> </a>} position={"right center"}>
-              <div>
+            <Popup trigger={<a> <AiOutlineMail /> </a>} position={"left center"} >
+              <div className="text-sm">
+                <b>grechilemelucas@gmail.com</b>
+                <br></br>
                 Copy e-mail to clickboard?
               </div>
-              <button onClick={copyemail} className="bg-gray-400 px-2 py-1 rounded-md active:bg-gray-600 justify-center">
-                Copy
+              <button className="bg-gray-400 px-2 py-1 rounded-md active:bg-gray-600 justify-center" onClick={copyemail} >
+                  Copy
               </button>
             </Popup>
           </div>
