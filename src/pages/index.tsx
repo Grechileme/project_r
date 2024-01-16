@@ -6,6 +6,7 @@ import {
   AiFillYoutube,
   AiFillGithub,
   AiOutlineMail,
+  AiOutlineDownCircle,
 } from "react-icons/ai";
 import Image from "next/image";
 import deved from "../../public/me.png";
@@ -106,6 +107,12 @@ export default function Home() {
               </ul>
             </ul>
           </nav>
+          <div className="text-center p-10 animate-pulse">
+            <h1 className="dark:text-gray-50 font-medium">Scroll down</h1>
+          </div>
+          <div className="animate-bounce flex justify-center text-4xl dark:text-gray-300 text-gray-600">
+            <AiOutlineDownCircle />
+          </div>
           <div data-aos="fade-up" className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Lucas Grechi Leme
