@@ -118,8 +118,10 @@ export default function Home() {
             </p>
           </div>
           <div data-aos="fade-up" className="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 text-gray-600">
-            <AiFillGithub />
-            <a href="https://www.linkedin.com/in/lucas-grechi-leme-86878a175/" target="_blank">
+            <a href="https://github.com/Grechileme" target="_blank">
+              <AiFillGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-grechi-leme" target="_blank">
               <AiFillLinkedin />
             </a>
             <Popup trigger={<a> <AiOutlineMail /> </a>} position={"left center"} >
