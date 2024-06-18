@@ -28,7 +28,7 @@ const Particles: React.FC<ParticlesProps> = ({darkmode}) => {
               mode: "push",
             },
             onHover: {
-              enable: true,
+              enable: false,
               mode: "repulse",
             },
             resize: true,
@@ -46,11 +46,11 @@ const Particles: React.FC<ParticlesProps> = ({darkmode}) => {
         particles: {
           color: {
             // value: "#ffffff",
-            value: darkmode ? "#ffffff" : "#00C5C5",
+            value: darkmode ? "#06b6d4" : "#00C5C5",
           },
           links: {
             // color: "#ffffff",
-            color: darkmode ? "#ffffff" : "#00C5C5",
+            color: darkmode ? "#06b6d4" : "#00C5C5",
             distance: 150,
             enable: true,
             opacity: 0.5,
