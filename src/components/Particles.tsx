@@ -6,11 +6,15 @@ const particlesInit = async (main: Engine) => {
   await loadFull(main);
 };
 
-const Particles = () => {
+
+
+const Particles = ({darkmode}) => {
+  // console.log('darkmode particle', darkmode);
   return (
     <TsParticles
       id="tsparticles"
       init={particlesInit}
+      className="z-0"
       // loaded={particlesLoaded}
       options={{
         fpsLimit: 120,
@@ -38,10 +42,12 @@ const Particles = () => {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            // value: "#ffffff",
+            value: darkmode ? "#ffffff" : "#00C5C5",
           },
           links: {
-            color: "#ffffff",
+            // color: "#ffffff",
+            color: darkmode ? "#ffffff" : "#00C5C5",
             distance: 150,
             enable: true,
             opacity: 0.5,

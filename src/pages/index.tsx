@@ -77,7 +77,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="overflow-auto bg-stone-200 px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="z-10 overflow-auto bg-stone-200 px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className=" min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-gray-50">{t('title')}</h1>
@@ -278,7 +278,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Particles />
+      <Particles darkmode={darkMode}/>
     </div>
   );
 }
