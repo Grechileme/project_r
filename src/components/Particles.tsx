@@ -1,14 +1,17 @@
 import { Particles as TsParticles } from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Engine } from "tsparticles-engine";
+import { FC } from "react";
 
 const particlesInit = async (main: Engine) => {
   await loadFull(main);
 };
 
+type ParticlesProps = {
+  darkmode: boolean;
+}
 
-
-const Particles = ({darkmode}) => {
+const Particles: React.FC<ParticlesProps> = ({darkmode}) => {
   // console.log('darkmode particle', darkmode);
   return (
     <TsParticles
