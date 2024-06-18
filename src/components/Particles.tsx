@@ -26,7 +26,7 @@ const Particles = ({darkmode}) => {
             },
             onHover: {
               enable: true,
-              mode: "grab",
+              mode: "repulse",
             },
             resize: true,
           },
