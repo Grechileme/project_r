@@ -34,6 +34,7 @@ import 'aos/dist/aos.css';
 // import { Alert } from 'reactstrap';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import Particles from "@/components/Particles";
 
 
 
@@ -277,6 +278,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Particles />
     </div>
   );
 }
